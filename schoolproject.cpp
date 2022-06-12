@@ -28,7 +28,7 @@ struct teacher
  string pay;//Pay of the Teacher
  string subj;//subject whos he/she teach
  string lec;//Lecture per Week
- string addrs;//Adders of teacher home
+ string addrs;//teacher's address
  string cel_no;//Phone number 
  string blod_grp;//Bool Group 
  string serves;//Number of serves in School
@@ -207,7 +207,7 @@ while(1)//inner loop-2
 { 
 system("cls");//Clear screen
 //Level-2 Display process
-cout<<"\t\t\tTEACHERS INFORMATION AND BIODATA SECTION\n\n\n";
+cout<<"\t\t\tTEACHER'S INFORMATION\n\n\n";
 cout<<"Enter your choice: "<<endl;
 cout<<"1.Create new entry\n";
 cout<<"2.Find and display\n";
