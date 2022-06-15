@@ -252,7 +252,7 @@ for(i=0;choice!='n'&& choice!='N';i++)
   cin>>teach[i].lecture;
   cout<<"Enter annual salary: $ ";
   cin>>teach[i].payment;
-  cout<<"Enter Phone Number: () ";
+  cout<<"Enter Phone Number: ";
   cin>>teach[i].cel_number;
   
   
