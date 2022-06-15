@@ -14,7 +14,7 @@ struct student
  string firstName;//for student first name
  string LastName;//for student last name
  string Address;//Student Address
- string classes;//for class info
+ string classes;//for class info such as class number or letter
  string parents_name;//Student's parents name
  string parents_number; //Students parents number
  
@@ -27,15 +27,15 @@ struct teacher
  string fist_name;//first name of teacher
  string last_name;//last name of teacher
  string qualification;//Qualification of teacher
- string experience;//Experiance of the person
- string payment;//Pay of the Teacher
- string subject;//subject whos he/she teach
- string lecture;//Lecture per Week
+ string experience;//Experiance of teacher
+ string payment;//Payment of Teacher
+ string subject;//subject he/she teachs
+ string lecture;//Lecture
  string addrs;//teacher's address
- string cel_number;//Phone number 
- string serves;//Number of serves in School
+ string cel_number;//Teacher's phone number 
+ string serves;//Number of years serving in School
 
-}tech[50];//Variable of teacher type
+}teach[50];//Variable of teacher type
 
 ///////////////////////////////////////////////////
 //Main function
@@ -237,29 +237,29 @@ for(i=0;choice!='n'&& choice!='N';i++)
  if((choice=='y')||(choice=='Y')||(choice=='1'))
  {
   cout<<"Enter First name: ";
-  cin>>tech[i].fist_name;
+  cin>>teach[i].fist_name;
   cout<<"Enter Last name:: ";
-  cin>>tech[i].last_name;
+  cin>>teach[i].last_name;
   cout<<"Enter qualification: ";
-  cin>>tech[i].qualification;
+  cin>>teach[i].qualification;
   cout<<"Enter experiance(year): ";
-  cin>>tech[i].experience;
+  cin>>teach[i].experience;
   cout<<"Enter number of year in this School: ";
-  cin>>tech[i].serves;
+  cin>>teach[i].serves;
   cout<<"Enter the Subject of the teacher: ";
-  cin>>tech[i].subject;
+  cin>>teach[i].subject;
   cout<<"Enter Lecture(per Week): ";
-  cin>>tech[i].lecture;
+  cin>>teach[i].lecture;
   cout<<"Enter pay: ";
-  cin>>tech[i].payment;
+  cin>>teach[i].payment;
   cout<<"Enter Phone Number: ";
-  cin>>tech[i].cel_number;
+  cin>>teach[i].cel_number;
   
   
-  t1<<tech[i].fist_name<<endl<<tech[i].last_name<<endl 
-   <<tech[i].qualification<<endl<<tech[i].experience<<endl
-   <<tech[i].serves<<endl<<tech[i].subject<<endl<<tech[i].lecture
-   <<endl<<tech[i].payment<<endl<<tech[i].cel_number<<endl;
+  t1<<teach[i].fist_name<<endl<<teach[i].last_name<<endl 
+   <<teach[i].qualification<<endl<<teach[i].experience<<endl
+   <<teach[i].serves<<endl<<teach[i].subject<<endl<<teach[i].lecture
+   <<endl<<teach[i].payment<<endl<<teach[i].cel_number<<endl;
   cout<<"Do you want to enter data? "<<endl;
   cout<<"Press Y for Continue and N to Finish: ";
   cin>>choice;
@@ -287,35 +287,35 @@ int notFound = 0;
 for( j=0;((j<i)||(!t2.eof()));j++)
 { 
  
- getline(t2,tech[j].fist_name);
+ getline(t2,teach[j].fist_name);
  
- if(tech[j].fist_name==find)
+ if(teach[j].fist_name==find)
  {
   notFound = 1;
   cout<<"First name: "<<tech[j].fist_name<<endl;
-  getline(t2,tech[j].last_name);
-  cout<<"Last name: "<<tech[j].last_name<<endl;
-  getline(t2,tech[j].qualification);
-  cout<<"Qualification: "<<tech[j].qualification<<endl;
-  getline(t2,tech[j].experience);
-  cout<<"Experience: "<<tech[j].experience<<endl;
+  getline(t2,teach[j].last_name);
+  cout<<"Last name: "<<teach[j].last_name<<endl;
+  getline(t2,teach[j].qualification);
+  cout<<"Qualification: "<<teach[j].qualification<<endl;
+  getline(t2,teach[j].experience);
+  cout<<"Experience: "<<teach[j].experience<<endl;
 
-  getline(t2,tech[j].serves);
-  cout<<" number of year in this School: "<<tech[j].serves<<endl;
+  getline(t2,teach[j].serves);
+  cout<<" number of year in this School: "<<teach[j].serves<<endl;
 
-  getline(t2,tech[j].subject);
-  cout<<"Subject whos teach: "<<tech[j].subject<<endl;
+  getline(t2,teach[j].subject);
+  cout<<"Subject whos teach: "<<teach[j].subject<<endl;
 
-  getline(t2,tech[j].lecture);
+  getline(t2,teach[j].lecture);
   cout<<"Enter Lecture(per Week): "<<tech[j].lecture<<endl;
-  getline(t2,tech[j].payment);
-  cout<<"pay: "<<tech[j].payment<<endl;
+  getline(t2,teach[j].payment);
+  cout<<"pay: "<<teach[j].payment<<endl;
 
-  getline(t2,tech[j].addrs);
-  cout<<"Address: "<<tech[j].addrs<<endl;
+  getline(t2,teach[j].addrs);
+  cout<<"Address: "<<teach[j].addrs<<endl;
 
-  getline(t2,tech[j].cel_number);
-  cout<<"Phone Number: "<<tech[j].cel_number<<endl;
+  getline(t2,teach[j].cel_number);
+  cout<<"Phone Number: "<<teach[j].cel_number<<endl;
 
  }//if
  
