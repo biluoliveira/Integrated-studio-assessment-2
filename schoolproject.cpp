@@ -292,7 +292,7 @@ for( j=0;((j<i)||(!t2.eof()));j++)
  if(teach[j].fist_name==find)
  {
   notFound = 1;
-  cout<<"First name: "<<tech[j].fist_name<<endl;
+  cout<<"First name: "<<teach[j].fist_name<<endl;
   getline(t2,teach[j].last_name);
   cout<<"Last name: "<<teach[j].last_name<<endl;
   getline(t2,teach[j].qualification);
@@ -307,7 +307,7 @@ for( j=0;((j<i)||(!t2.eof()));j++)
   cout<<"Subject whos teach: "<<teach[j].subject<<endl;
 
   getline(t2,teach[j].lecture);
-  cout<<"Enter Lecture(per Week): "<<tech[j].lecture<<endl;
+  cout<<"Enter Lecture(per Week): "<<teach[j].lecture<<endl;
   getline(t2,teach[j].payment);
   cout<<"pay: "<<teach[j].payment<<endl;
 
