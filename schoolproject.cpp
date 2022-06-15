@@ -13,8 +13,11 @@ struct student
 {
  string firstName;//for student first name
  string LastName;//for student last name
- string Registration;//for Registration No number
+ string Address;//Student Address
  string classes;//for class info
+ string parents_name;//Student's parents name
+ string parents_number; //Students parents number
+ 
 }
  studentData;//Variable of student type
 
@@ -24,13 +27,12 @@ struct teacher
  string fist_name;//first name of teacher
  string last_name;//last name of teacher
  string qualification;//Qualification of teacher
- string exp;//Experiance of the person
- string pay;//Pay of the Teacher
- string subj;//subject whos he/she teach
- string lec;//Lecture per Week
+ string experience;//Experiance of the person
+ string payment;//Pay of the Teacher
+ string subject;//subject whos he/she teach
+ string lecture;//Lecture per Week
  string addrs;//teacher's address
- string cel_no;//Phone number 
- string blod_grp;//Bool Group 
+ string cel_number;//Phone number 
  string serves;//Number of serves in School
 
 }tech[50];//Variable of teacher type
@@ -51,10 +53,10 @@ string userName; //user name ID validation
 string userPassword; //User input password
 int loginAttempt = 0;
 
-cout <<">>>>>>>";
-cout <<" Please Create User Name and Password to loggin: ";
-cout <<"<<<<<<<\n";
-cout <<"Create your User Name: ";
+cout <<"-----> ";
+cout <<" Please Create UserName and Password to loggin: ";
+cout <<"<-----\n";
+cout <<"Create your username: ";
 cin >> CreateUsername;
 cout <<"Create your password: ";
 cin >> CreatePassword;
@@ -62,9 +64,9 @@ cin >> CreatePassword;
 while (loginAttempt < 3)
 { 
 cout <<"----------------------------\n";
-cout << "Please enter your user name: ";
+cout << "Please enter your username: ";
 cin >> userName;
-cout << "Please enter your user password: ";
+cout << "Please enter your password: ";
 cin >> userPassword;
 
 if (userName == CreateUsername && userPassword == CreatePassword)
@@ -93,13 +95,13 @@ while(1)
  system("cls");//Clear screen
 
 //Level 1-Display process 
- cout<<"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\";
- cout<<"\n\n\t\t\t SCHOOL INFORMATION SYSTEM\n\n";
- cout<<"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\";
- cout<<"\n\n\t\t\tMAIN SCREEN\n\n";
+ cout<<"----------------------------------------------------------------------------------------------------------------------";
+ cout<<"\n\n\t\t\t>>> SCHOOL INFORMATION SYSTEM <<<\n\n";
+ cout<<"----------------------------------------------------------------------------------------------------------------------";
+ cout<<"\n\n\t\t\tMENU OPTIONS\n\n";
  cout<<"Enter your choice: "<<endl;
- cout<<"1.Students information"<<endl;
- cout<<"2.Teacher information"<<endl;
+ cout<<"1.Student's information"<<endl;
+ cout<<"2.Teacher's information"<<endl;
  cout<<"3.Exit program"<<endl;
  cin>>choice;
 
@@ -115,10 +117,10 @@ while(1)//inner loop-1
 { 
 system("cls");//Clear screen
 //Level-2 display
-cout<<"\t\t\tSTUDENTS INFORMATION AND BIO DATA SECTION\n\n\n";
+cout<<"\t\t\tSTUDENTS INFORMATION SECTION\n\n\n";
 cout<<"Enter your choice: "<<endl;
-cout<<"1.Create new entry?\n";
-cout<<"2.Find and display entry?\n";
+cout<<"1.Insert New Student data?\n";
+cout<<"2.Find and display Student's data?\n";
 cout<<"3.Jump to main?\n";
 cin>>choice;
 
@@ -137,14 +139,19 @@ if((choice=='y')||(choice=='Y')||(choice=='1'))
  cin>>studentData.firstName;
  cout<<"Enter Last name: ";
  cin>>studentData.LastName;
- cout<<"Enter Registration number: ";
- cin>>studentData.Registration;
+ cout<<"Enter the Address: ";
+ cin>>studentData.Address;
  cout<<"Enter class: ";
  cin>>studentData.classes;
+ cout<<"Enter the parent's name: ";
+ cin>>studentData.parents_name;
+ cout<<"Enter the parent's number: ";
+ cin>>studentData.parents_number;
+
  
- f1<<studentData.firstName<<endl<<studentData.LastName<<endl<<studentData.Registration<<endl<<studentData.classes<<endl;
- cout<<"Do you want to enter data: ";
- cout<<"Press Y for Continue and N to Finish:  ";
+ f1<<studentData.firstName<<endl<<studentData.LastName<<endl<<studentData.Address<<endl<<studentData.classes<<endl<<studentData.parents_name<<endl<<studentData.parents_number<<endl;
+ cout<<"Do you want to enter data? "<<endl;
+ cout<<"Press Y for Continue and N to Finish: ";
  cin>>choice;
 }
 } 
@@ -155,7 +162,7 @@ continue;//control back to inner loop -1
 case '2'://Display data
 {  ifstream f2("student.txt"); 
 
-cout<<"Enter First name to be displayed: ";
+cout<<"Enter the First name of the student to display data: ";
 cin>>find;
 cout<<endl;
 int notFound = 0;
@@ -170,10 +177,14 @@ if(studentData.firstName==find)
  cout<<"First Name: "<<studentData.firstName<<endl;
  cout<<"Last Name: "<<studentData.LastName<<endl;
 
- getline(f2,studentData.Registration);
- cout<<"Registration No number: "<<studentData.Registration<<endl;
+ getline(f2,studentData.Address);
+ cout<<"Registration number: "<<studentData.Address<<endl;
  getline(f2,studentData.classes);
- cout<<"Class: "<<studentData.classes<<endl<<endl;
+ cout<<"Class: "<<studentData.classes<<endl;
+ getline(f2,studentData.parents_name);
+ cout<<"Parent's Name: "<<studentData.parents_name<<endl;
+ getline(f2,studentData.parents_number);
+ cout<<"Parent's Number: "<<studentData.parents_number<<endl;
 }
 
 }
@@ -209,9 +220,9 @@ system("cls");//Clear screen
 //Level-2 Display process
 cout<<"\t\t\tTEACHER'S INFORMATION\n\n\n";
 cout<<"Enter your choice: "<<endl;
-cout<<"1.Create new entry\n";
-cout<<"2.Find and display\n";
-cout<<"3.Jump to main\n";
+cout<<"1.Insert New teacher data\n";
+cout<<"2.Find and display the teacher's data\n";
+cout<<"3.BACK TO THE MENU OPTIONS\n";
 cin>>choice;
 
 switch (choice)//Third switch
@@ -232,26 +243,25 @@ for(i=0;choice!='n'&& choice!='N';i++)
   cout<<"Enter qualification: ";
   cin>>tech[i].qualification;
   cout<<"Enter experiance(year): ";
-  cin>>tech[i].exp;
+  cin>>tech[i].experience;
   cout<<"Enter number of year in this School: ";
   cin>>tech[i].serves;
-  cout<<"Enter Subject whos teach: ";
-  cin>>tech[i].subj;
+  cout<<"Enter the Subject of the teacher: ";
+  cin>>tech[i].subject;
   cout<<"Enter Lecture(per Week): ";
-  cin>>tech[i].lec;
+  cin>>tech[i].lecture;
   cout<<"Enter pay: ";
-  cin>>tech[i].pay;
+  cin>>tech[i].payment;
   cout<<"Enter Phone Number: ";
-  cin>>tech[i].cel_no;
-  cout<<"Enter Blood Group: ";
-  cin>>tech[i].blod_grp;
+  cin>>tech[i].cel_number;
   
   
   t1<<tech[i].fist_name<<endl<<tech[i].last_name<<endl 
-   <<tech[i].qualification<<endl<<tech[i].exp<<endl
-   <<tech[i].serves<<endl<<tech[i].subj<<endl<<tech[i].lec
-   <<endl<<tech[i].pay<<endl<<tech[i].cel_no<<endl<<tech[i].blod_grp<<endl;
-  cout<<"Do you want to enter data: ";
+   <<tech[i].qualification<<endl<<tech[i].experience<<endl
+   <<tech[i].serves<<endl<<tech[i].subject<<endl<<tech[i].lecture
+   <<endl<<tech[i].payment<<endl<<tech[i].cel_number<<endl;
+  cout<<"Do you want to enter data? "<<endl;
+  cout<<"Press Y for Continue and N to Finish: ";
   cin>>choice;
  }//if
 }//for loop
@@ -287,28 +297,26 @@ for( j=0;((j<i)||(!t2.eof()));j++)
   cout<<"Last name: "<<tech[j].last_name<<endl;
   getline(t2,tech[j].qualification);
   cout<<"Qualification: "<<tech[j].qualification<<endl;
-  getline(t2,tech[j].exp);
-  cout<<"Experience: "<<tech[j].exp<<endl;
+  getline(t2,tech[j].experience);
+  cout<<"Experience: "<<tech[j].experience<<endl;
 
   getline(t2,tech[j].serves);
   cout<<" number of year in this School: "<<tech[j].serves<<endl;
 
-  getline(t2,tech[j].subj);
-  cout<<"Subject whos teach: "<<tech[j].subj<<endl;
+  getline(t2,tech[j].subject);
+  cout<<"Subject whos teach: "<<tech[j].subject<<endl;
 
-  getline(t2,tech[j].lec);
-  cout<<"Enter Lecture(per Week): "<<tech[j].lec<<endl;
-  getline(t2,tech[j].pay);
-  cout<<"pay: "<<tech[j].pay<<endl;
+  getline(t2,tech[j].lecture);
+  cout<<"Enter Lecture(per Week): "<<tech[j].lecture<<endl;
+  getline(t2,tech[j].payment);
+  cout<<"pay: "<<tech[j].payment<<endl;
 
   getline(t2,tech[j].addrs);
   cout<<"Address: "<<tech[j].addrs<<endl;
 
-  getline(t2,tech[j].cel_no);
-  cout<<"Phone Number: "<<tech[j].cel_no<<endl;
+  getline(t2,tech[j].cel_number);
+  cout<<"Phone Number: "<<tech[j].cel_number<<endl;
 
-  getline(t2,tech[j].blod_grp);
-  cout<<"Bool Group: "<<tech[j].blod_grp<<endl;
  }//if
  
 }//for loop
@@ -317,7 +325,7 @@ if(notFound == 0){
 
  cout<<"No Record Found"<<endl;
 }
-cout<<"Press any key two times to proceed";
+cout<<"Type any key two times to continue!";
 getch();//To hold data on screen
 getch();//To hold data on screen
 }//case 2
