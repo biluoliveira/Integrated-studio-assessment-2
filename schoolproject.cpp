@@ -154,6 +154,12 @@ if((choice=='y')||(choice=='Y')||(choice=='1'))
  cout<<"Press Y for Continue and N to Finish: ";
  cin>>choice;
 }
+if((choice!='y')||(choice!='n')||(choice=='1'))
+{
+  cout<<"Invalid choice! "<<endl;
+  cout<<"Please enter Y or N: ";
+  cin>>choice;
+}
 } 
 f1.close();
 }
@@ -264,6 +270,12 @@ for(i=0;choice!='n'&& choice!='N';i++)
   cout<<"Press Y for Continue and N to Finish: ";
   cin>>choice;
  }//if
+ if((choice!='y')||(choice!='n')||(choice=='1'))
+{
+  cout<<"Invalid choice! "<<endl;
+  cout<<"Please enter Y or N: ";
+  cin>>choice;
+}
 }//for loop
 //for finding through name 
 system("cls");
