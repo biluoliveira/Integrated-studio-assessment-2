@@ -54,7 +54,7 @@ string userPassword; //User input password
 int loginAttempt = 0;
 
 cout <<"-----> ";
-cout <<" Please Create UserName and Password to loggin: ";
+cout <<" Please Create UserName and Password for ADMIN access: ";
 cout <<"<-----\n";
 cout <<"Create your username: ";
 cin >> CreateUsername;
@@ -96,7 +96,7 @@ while(1)
 
 //Level 1-Display process 
  cout<<"----------------------------------------------------------------------------------------------------------------------";
- cout<<"\n\n\t\t\t>>> SCHOOL INFORMATION SYSTEM <<<\n\n";
+ cout<<"\n\n\t\t\t----> SCHOOL INFORMATION SYSTEM <----\n\n";
  cout<<"----------------------------------------------------------------------------------------------------------------------";
  cout<<"\n\n\t\t\tMENU OPTIONS\n\n";
  cout<<"Enter your choice: "<<endl;
@@ -119,7 +119,7 @@ system("cls");//Clear screen
 //Level-2 display
 cout<<"\t\t\tSTUDENTS INFORMATION SECTION\n\n\n";
 cout<<"Enter your choice: "<<endl;
-cout<<"1.Insert New Student data?\n";
+cout<<"1.Insert New Student's data?\n";
 cout<<"2.Find and display Student's data?\n";
 cout<<"3.Jump to main?\n";
 cin>>choice;
@@ -220,7 +220,7 @@ system("cls");//Clear screen
 //Level-2 Display process
 cout<<"\t\t\tTEACHER'S INFORMATION\n\n\n";
 cout<<"Enter your choice: "<<endl;
-cout<<"1.Insert New teacher data\n";
+cout<<"1.Insert New teacher's data\n";
 cout<<"2.Find and display the teacher's data\n";
 cout<<"3.BACK TO THE MENU OPTIONS\n";
 cin>>choice;
@@ -250,9 +250,9 @@ for(i=0;choice!='n'&& choice!='N';i++)
   cin>>teach[i].subject;
   cout<<"Enter Lecture(per Week): ";
   cin>>teach[i].lecture;
-  cout<<"Enter pay: ";
+  cout<<"Enter annual salary: $ ";
   cin>>teach[i].payment;
-  cout<<"Enter Phone Number: ";
+  cout<<"Enter Phone Number: () ";
   cin>>teach[i].cel_number;
   
   
@@ -260,7 +260,7 @@ for(i=0;choice!='n'&& choice!='N';i++)
    <<teach[i].qualification<<endl<<teach[i].experience<<endl
    <<teach[i].serves<<endl<<teach[i].subject<<endl<<teach[i].lecture
    <<endl<<teach[i].payment<<endl<<teach[i].cel_number<<endl;
-  cout<<"Do you want to enter data? "<<endl;
+  cout<<"Would you like to insert new teacher's data? "<<endl;
   cout<<"Press Y for Continue and N to Finish: ";
   cin>>choice;
  }//if
