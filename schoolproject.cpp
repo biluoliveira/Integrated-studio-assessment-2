@@ -83,7 +83,7 @@ loginAttempt++;
 }
 if (loginAttempt == 3)
 {
-cout << "Too many login attempts! The program will now terminate.";
+cout << "Too many login attempts! Try again later.";
 return 0;
 }
 
