@@ -107,17 +107,6 @@ while(1)
 
 system("cls");//Clear screen
 
-if((choice!='1')||(choice!='2')||(choice!='3'))
-{
-  cout<<"Invalid choice! "<<endl;
-  cout<<"Please enter:"<<endl; 
-  cout<<"1- For Student's data"<<endl; 
-  cout<<"2- For Teacher's data."<<endl;
-  cout<<"3- Exit the Program."<<endl;
-  cout<<"Enter any other character to terminate the program."<<endl;
-  cin>>choice;
-}
-
 switch(choice)//First switch
 {
  
