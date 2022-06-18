@@ -47,14 +47,15 @@ int i=0,j;//for processing usage
 char choice;//for getting choice
 string find;//for sorting
 string srch;
-string CreateUsername; //creating user name to access the system
-string CreatePassword; //Password to login
+char CreateUsername [7]; //creating user name to access the system
+char CreatePassword [7]; //Password to login
 string userName; //user name ID validation
 string userPassword; //User input password
 int loginAttempt = 0;
 
 cout <<"-----> ";
-cout <<" Please Create UserName and Password for ADMIN access: ";
+cout <<" Please Create UserName and Password for ADMIN access: "<<endl;
+cout <<" MAXIMUM OF 6 LETTERS AND NUMBERS, DO NOT USE SPECIAL CHARACTERS!";
 cout <<"<-----\n";
 cout <<"Create your username: ";
 cin >> CreateUsername;
@@ -87,12 +88,10 @@ cout << "Too many login attempts! Try again later.";
 return 0;
 }
 
-cout << "Thank you for logging in.";  
-
+cout << "Thank you for log in."<<endl;
 
 while(1)
 { 
- system("cls");//Clear screen
 
 //Level 1-Display process 
  cout<<"----------------------------------------------------------------------------------------------------------------------";
@@ -103,18 +102,9 @@ while(1)
  cout<<"1.Student's information"<<endl;
  cout<<"2.Teacher's information"<<endl;
  cout<<"3.Exit program"<<endl;
- cin>>choice;
+ cin>>choice; 
 
 system("cls");//Clear screen
-
-if((choice!='1')||(choice!='2'))
-{
-  cout<<"Do you want to close the system?"<<endl;
-  cout<<"Enter 3 or any character to exit or: "<<endl;
-  cout<<"1- Student's information:"<<endl;
-  cout<<"2- Teacher's information:"<<endl;
-  cin>>choice;
-}
 
 switch(choice)//First switch
 {
@@ -129,7 +119,7 @@ cout<<"\t\t\tSTUDENTS INFORMATION SECTION\n\n\n";
 cout<<"Enter your choice: "<<endl;
 cout<<"1.Insert New Student's data?\n";
 cout<<"2.Find and display Student's data?\n";
-cout<<"3.Jump to main?\n";
+cout<<"3.BACK TO MAIN MENU?\n";
 cin>>choice;
 
 switch (choice)//Second switch
@@ -236,7 +226,7 @@ cout<<"\t\t\tTEACHER'S INFORMATION\n\n\n";
 cout<<"Enter your choice: "<<endl;
 cout<<"1.Insert New teacher's data\n";
 cout<<"2.Find and display the teacher's data\n";
-cout<<"3.BACK TO THE MENU OPTIONS\n";
+cout<<"3.BACK TO MAIN MENU\n";
 cin>>choice;
 
 switch (choice)//Third switch
