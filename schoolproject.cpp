@@ -107,6 +107,15 @@ while(1)
 
 system("cls");//Clear screen
 
+if((choice!='1')||(choice!='2'))
+{
+  cout<<"Do you want to close the system?"<<endl;
+  cout<<"Enter 3 or any character to exit or: "<<endl;
+  cout<<"1- Student's information:"<<endl;
+  cout<<"2- Teacher's information:"<<endl;
+  cin>>choice;
+}
+
 switch(choice)//First switch
 {
  
