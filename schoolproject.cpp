@@ -200,7 +200,7 @@ getch();//To hold data on screen
 }
 continue;//control back to inner loop -1
 
-case '3'://Jump to main
+case '3'://Back to the main menu
 {
 break;//inner switch breaking
 }
@@ -265,7 +265,7 @@ for(i=0;choice!='n'&& choice!='N';i++)
  }//if
  
 }//for loop
-//for finding through name 
+//for finding data through name 
 system("cls");
 
 t1.close();
@@ -330,7 +330,7 @@ getch();//To hold data on screen
 
 continue;//Control pass to inner loop-2
 
-case '3'://Jump to main 
+case '3'://Back to the main menu
 {
 break;//inner switch
 }//case 3
