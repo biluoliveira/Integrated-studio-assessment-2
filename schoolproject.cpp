@@ -256,9 +256,9 @@ for(i=0;choice!='n'&& choice!='N';i++)
   
   
   t1<<teach[i].fist_name<<endl<<teach[i].last_name<<endl 
-   <<teach[i].qualification<<endl<<teach[i].experience<<endl
-   <<teach[i].serves<<endl<<teach[i].subject<<endl<<teach[i].lecture
-   <<endl<<teach[i].payment<<endl<<teach[i].cel_number<<endl;
+  <<teach[i].qualification<<endl<<teach[i].experience<<endl
+  <<teach[i].serves<<endl<<teach[i].subject<<endl<<teach[i].lecture
+  <<endl<<teach[i].payment<<endl<<teach[i].cel_number<<endl;
   cout<<"Would you like to insert new teacher's data? "<<endl;
   cout<<"Press Y for Continue and N to Finish: ";
   cin>>choice;
@@ -267,8 +267,6 @@ for(i=0;choice!='n'&& choice!='N';i++)
 }//for loop
 //for finding through name 
 system("cls");
-
-
 
 t1.close();
 }//case 1
