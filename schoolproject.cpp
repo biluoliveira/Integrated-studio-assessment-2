@@ -148,16 +148,11 @@ if((choice=='y')||(choice=='Y')||(choice=='1'))
 
  
  f1<<studentData.firstName<<endl<<studentData.LastName<<endl<<studentData.Address<<endl<<studentData.classes<<endl<<studentData.parents_name<<endl<<studentData.parents_number<<endl;
- cout<<"Do you want to enter data? "<<endl;
+ cout<<"Do you want to enter new student's data? "<<endl;
  cout<<"Press Y for Continue and N to Finish: ";
  cin>>choice;
 }
-if((choice!='y')||(choice!='n')||(choice=='1'))
-{
-  cout<<"Invalid choice! "<<endl;
-  cout<<"Please enter Y or N: ";
-  cin>>choice;
-}
+
 } 
 f1.close();
 }
@@ -268,12 +263,7 @@ for(i=0;choice!='n'&& choice!='N';i++)
   cout<<"Press Y for Continue and N to Finish: ";
   cin>>choice;
  }//if
- if((choice!='y')||(choice!='n')||(choice=='1'))
-{
-  cout<<"Invalid choice! "<<endl;
-  cout<<"Please enter Y or N: ";
-  cin>>choice;
-}
+ 
 }//for loop
 //for finding through name 
 system("cls");
