@@ -349,6 +349,6 @@ case '3':
 break;//outer case 3
 }//outer case 3
 }   
-break;//outer loop
+break;//outer looping
 }
 }
