@@ -138,7 +138,7 @@ if((choice=='y')||(choice=='Y')||(choice=='1'))
  cout<<"Enter Last name: ";
  cin>>studentData.LastName;
  cout<<"Enter the Address: ";
- cin>>studentData.Address;
+ getline(cin, studentData.Address);
  cout<<"Enter class: ";
  cin>>studentData.classes;
  cout<<"Enter the parent's name: ";
